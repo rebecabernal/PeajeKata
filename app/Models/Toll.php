@@ -9,7 +9,7 @@ class Toll extends Model
     protected $fillable = [
         "name",
         "city",
-        "pendent"
+        "income"
     ];
 
     public function vehicles()
