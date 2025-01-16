@@ -18,10 +18,10 @@ class VehicleController extends Controller
         $toll->update(["income" => $toll->income + $vehicle->vehicleType->price]);
 
         return response()->json([
-            "Toll name:" => $toll->name,
-            "Toll income:" => $toll->income,
-            "Vehicle plate:" => $vehicle->plate,
-            "Total to play:" => $vehicle->total_pay
+            "name" => $toll->name,
+            "income:" => $toll->income,
+            "plate:" => $vehicle->plate,
+            "total_play:" => $vehicle->total_pay
         ], 200);
     }
 
@@ -30,7 +30,7 @@ class VehicleController extends Controller
         $vehicle = Vehicle::create([
             "vehicle_type" => $request->vehicle_type,
             "plate" => $request->registration,
-            "total_pay" => 0
+            "total_pay" => $request->income
         ]);
 
         return response()->json($vehicle, 200);

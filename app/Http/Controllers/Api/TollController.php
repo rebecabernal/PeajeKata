@@ -13,7 +13,7 @@ class TollController extends Controller
         $toll = Toll::create([
             "name" => $request->name,
             "city" => $request->city,
-            "income" => 0
+            "income" => $request->income
         ]);
 
         return response()->json($toll, 200);
