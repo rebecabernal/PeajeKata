@@ -26,7 +26,7 @@ class VehicleTest extends TestCase
         $response = $this->post('/api/vehicles', [
             "type_id" => 1,
             "plate" => "test",
-            "toal_pay" => 0
+            "total_pay" => 0
         ]);
 
         $response->assertStatus(200)
@@ -37,7 +37,7 @@ class VehicleTest extends TestCase
                 ]);
     }
 
-    public function testIfPasTollMethodIsWorking(): void
+    public function testIfPassTollMethodIsWorking(): void
     {
         Toll::create([
             "name" => "test",

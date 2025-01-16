@@ -8,7 +8,7 @@ use App\Http\Controllers\Controller;
 
 class VehicleController extends Controller
 {
-    public function goThroughToll(string $id, string $toll_id)
+    public function passToll(string $id, string $toll_id)
     {
         $vehicle = Vehicle::find($id);
         $vehicle->tolls()->attach([(int)$toll_id]);
@@ -28,7 +28,7 @@ class VehicleController extends Controller
     public function store(Request $request)
     {
         $vehicle = Vehicle::create([
-            "vehicle_type" => $request->vehicle_type,
+            "type_id" => $request->type_id,
             "plate" => $request->plate,
             "total_pay" => $request->total_pay
         ]);
