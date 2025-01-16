@@ -11,14 +11,4 @@ class VehicleType extends Model
         "price"
     ];
 
-    public function vehicleType()
-    {
-        return $this->belongsToMany(Vehicle::class, "vehicle_type");
-    }
-
-    public function tolls()
-    {
-        return $this->belongsToMany(Toll::class, "vehicle_toll");
-    }
-
 }
