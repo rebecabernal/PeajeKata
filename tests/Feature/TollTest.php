@@ -2,18 +2,27 @@
 
 namespace Tests\Feature;
 
-use Illuminate\Foundation\Testing\RefreshDatabase;
-use Illuminate\Foundation\Testing\WithFaker;
 use Tests\TestCase;
+use App\Models\Toll;
+use Illuminate\Foundation\Testing\WithFaker;
+use Illuminate\Foundation\Testing\RefreshDatabase;
 
 class TollTest extends TestCase
 {
-    /**
-     * A basic feature test example.
-     */
-    public function test_example(): void
+    use RefreshDatabase;
+
+    public function testIfIndexMethodIsWorking(): void
     {
-        $response = $this->get('/');
+        
+        $this->withoutExceptionHandling();
+        
+        Toll::create([
+            "name" => "test",
+            "city" => "test",
+            "income" => 0
+        ]);
+
+        $response = $this->get('/tolls');
 
         $response->assertStatus(200);
     }

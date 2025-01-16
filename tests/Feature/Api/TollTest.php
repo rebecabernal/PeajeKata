@@ -11,10 +11,21 @@ class TollTest extends TestCase
     /**
      * A basic feature test example.
      */
-    public function test_example(): void
-    {
-        $response = $this->get('/');
+    use RefreshDatabase;
 
-        $response->assertStatus(200);
+    public function testStoreMethodIsWorking(): void
+    {
+        $response = $this->post('/api/tolls', [
+            "name" => "testing",
+            "city" => "testing",
+            "income" => 0
+        ]);
+
+        $response->assertStatus(200)
+                ->assertJsonFragment([
+                    "name" => "testing",
+                    "city" => "testing",
+                    "income" => 0
+                ]);
     }
 }
