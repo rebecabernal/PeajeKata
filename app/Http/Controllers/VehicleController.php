@@ -11,6 +11,6 @@ class VehicleController extends Controller
     {
         $vehicles = Vehicle::all();
 
-        return view("vehicles", compact("vehicles"));
+        return view('vehicles', compact("vehicles"));
     }
 }

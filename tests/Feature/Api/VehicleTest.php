@@ -11,12 +11,18 @@ use Illuminate\Foundation\Testing\RefreshDatabase;
 
 class VehicleTest extends TestCase
 {
+<<<<<<< HEAD
     /**
      * A basic feature test example.
      */
     use RefreshDatabase;
 
     public function testCheckIfStoreMethodIsWorking(): void
+=======
+    use RefreshDatabase;
+
+    public function test_check_if_store_method_works(): void
+>>>>>>> dev
     {
         VehicleType::create([
             "type" => "car",
@@ -37,7 +43,11 @@ class VehicleTest extends TestCase
                 ]);
     }
 
+<<<<<<< HEAD
     public function testIfPassTollMethodIsWorking(): void
+=======
+   /*  public function test_if_pass_toll_method_works(): void
+>>>>>>> dev
     {
         Toll::create([
             "name" => "test",
@@ -51,7 +61,11 @@ class VehicleTest extends TestCase
         ]);
 
         Vehicle::create([
+<<<<<<< HEAD
             "type_id" => 1,
+=======
+            "type_id" => $vehic,
+>>>>>>> dev
             "plate" => "test",
             "total_pay" => 0
         ]);
@@ -67,4 +81,43 @@ class VehicleTest extends TestCase
                     "total_pay" => 100
                 ]);
     }
+<<<<<<< HEAD
 }
+=======
+} */
+    public function test_if_pass_toll_method_works(): void
+    {
+        // Aseguramos que un tipo de vehículo sea creado
+        $vehicleType = VehicleType::create([
+            "type" => "car",
+            "price" => 100
+        ]);
+
+        // Creamos el peaje
+        Toll::create([
+            "name" => "test",
+            "city" => "test",
+            "income" => 0
+        ]);
+
+        // Usamos el id del VehicleType previamente creado
+        $vehicle = Vehicle::create([
+            "type_id" => $vehicleType->id, // Aquí usamos el id del VehicleType
+            "plate" => "test",
+            "total_pay" => 0
+        ]);
+
+        // Realizamos la petición PUT
+        $response = $this->put(route('apipasstoll', ['id' => $vehicle->id, 'tollId' => $vehicleType->id]));
+
+        // Verificamos la respuesta
+        $response->assertStatus(200)
+                ->assertJsonFragment([
+                    "name" => "test",
+                    "income" => 100,
+                    "plate" => "test",
+                    "total_pay" => 100
+                ]);
+    }
+}
+>>>>>>> dev
