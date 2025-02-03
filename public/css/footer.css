@@ -1,0 +1,32 @@
+footer {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 1em;
+}
+
+footer .footer-anchor a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    color: #FFFFFF;
+    font-weight: bold;
+    transition: color 0.3s, transform 0.3s;
+}
+
+footer .footer-anchor a:hover {
+    color: #F39C12;
+    transform: scale(1.1);
+}
+
+footer .footer-anchor img {
+    width: 3.5rem;
+    height: 3.5rem;
+    display: inline-block;
+}
