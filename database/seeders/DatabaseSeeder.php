@@ -34,6 +34,27 @@ class DatabaseSeeder extends Seeder
             "income" => 0
         ]);
 
+        Toll::create([
+            "name" => "Pinto",
+            "city" => "Málaga",
+            "income" => 0
+        ]);
+        Toll::create([
+            "name" => "Valdemoro",
+            "city" => "Málaga",
+            "income" => 0
+        ]);
+        Toll::create([
+            "name" => "Villanueva del Rosario",
+            "city" => "Málaga",
+            "income" => 0
+        ]);
+        Toll::create([
+            "name" => "Coín",
+            "city" => "Málaga",
+            "income" => 0
+        ]);
+
         VehicleType::create([
             "type" => "car",
             "price" => 100
