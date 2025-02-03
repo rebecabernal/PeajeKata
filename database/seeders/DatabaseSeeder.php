@@ -25,13 +25,13 @@ class DatabaseSeeder extends Seeder
         Toll::create([
             "name" => "Guarromán",
             "city" => "Málaga",
-            "earnings" => 0
+            "income" => 0
         ]);
 
         Toll::create([
             "name" => "Villanueva del Trabuco",
             "city" => "Málaga",
-            "earnings" => 0
+            "income" => 0
         ]);
 
         VehicleType::create([
@@ -66,38 +66,38 @@ class DatabaseSeeder extends Seeder
 
         $car = Vehicle::create([
             "type_id" => 1,
-            "license" => "7996HID",
-            "total_expense" => 0
+            "plate" => "7996HID",
+            "total_pay" => 0
         ]);
 
         $bike = Vehicle::create([
             "type_id" => 2,
-            "license" => "6483UGG",
-            "total_expense" => 0
+            "plate" => "6483UGG",
+            "total_pay" => 0
         ]);
 
         $truck1 = Vehicle::create([
             "type_id" => 3,
-            "license" => "8882KOS",
-            "total_expense" => 0
+            "plate" => "8882KOS",
+            "total_pay" => 0
         ]);
 
         $truck2 = Vehicle::create([
             "type_id" => 4,
-            "license" => "6372MND",
-            "total_expense" => 0
+            "plate" => "6372MND",
+            "total_pay" => 0
         ]);
 
         $truck3 = Vehicle::create([
             "type_id" => 5,
-            "license" => "1998PGS",
-            "total_expense" => 0
+            "plate" => "1998PGS",
+            "total_pay" => 0
         ]);
 
         $truck4 = Vehicle::create([
             "type_id" => 6,
-            "license" => "1083HJB",
-            "total_expense" => 0
+            "plate" => "1083HJB",
+            "total_pay" => 0
         ]);
     }
 }
