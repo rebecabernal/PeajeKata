@@ -19,18 +19,18 @@ class VehicleController extends Controller
 
         return response()->json([
             "name" => $toll->name,
-            "income:" => $toll->income,
-            "plate:" => $vehicle->plate,
-            "total_play:" => $vehicle->total_pay
+            "income" => $toll->income,
+            "plate" => $vehicle->plate,
+            "total_pay" => $vehicle->total_pay
         ], 200);
     }
 
     public function store(Request $request)
     {
         $vehicle = Vehicle::create([
-            "vehicle_type" => $request->vehicle_type,
-            "plate" => $request->registration,
-            "total_pay" => $request->income
+            "type_id" => $request->type_id,
+            "plate" => $request->plate,
+            "total_pay" => $request->total_pay
         ]);
 
         return response()->json($vehicle, 200);
