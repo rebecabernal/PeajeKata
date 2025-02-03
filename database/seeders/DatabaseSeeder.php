@@ -111,7 +111,7 @@ class DatabaseSeeder extends Seeder
 
         $truck3 = Vehicle::create([
             "type_id" => 5,
-            "plate" => "1998PGS",
+            "plate" => "2005RBK",
             "total_pay" => 0
         ]);
 
