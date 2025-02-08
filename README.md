@@ -2,6 +2,10 @@
 In this project it is required to develop a program that models a toll system. In which data on both tolls and vehicles are stored, as well as the relationships between them.Designed with [Laravel](https://laravel.com) framework. 
 
 ## 👀 Views
+
+![Captura de pantalla 2025-02-08 120420](https://github.com/user-attachments/assets/7959b24a-69a7-4f30-9f7e-2ce1e839e2e8)
+*Home View*
+
 ![Captura de pantalla 2025-02-08 120409](https://github.com/user-attachments/assets/42dc5a66-b998-4047-8606-49eed0cdfd4d)
 *Tolls View*
 
