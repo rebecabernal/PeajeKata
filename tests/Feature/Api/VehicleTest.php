@@ -81,9 +81,6 @@ class VehicleTest extends TestCase
                     "total_pay" => 100
                 ]);
     }
-<<<<<<< HEAD
-}
-=======
 } */
     public function test_if_pass_toll_method_works(): void
     {
@@ -120,4 +117,3 @@ class VehicleTest extends TestCase
                 ]);
     }
 }
->>>>>>> dev
