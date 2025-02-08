@@ -34,6 +34,27 @@ class DatabaseSeeder extends Seeder
             "income" => 0
         ]);
 
+        Toll::create([
+            "name" => "Pinto",
+            "city" => "Málaga",
+            "income" => 0
+        ]);
+        Toll::create([
+            "name" => "Valdemoro",
+            "city" => "Málaga",
+            "income" => 0
+        ]);
+        Toll::create([
+            "name" => "Villanueva del Rosario",
+            "city" => "Málaga",
+            "income" => 0
+        ]);
+        Toll::create([
+            "name" => "Coín",
+            "city" => "Málaga",
+            "income" => 0
+        ]);
+
         VehicleType::create([
             "type" => "car",
             "price" => 100
@@ -90,7 +111,7 @@ class DatabaseSeeder extends Seeder
 
         $truck3 = Vehicle::create([
             "type_id" => 5,
-            "plate" => "1998PGS",
+            "plate" => "2005RBK",
             "total_pay" => 0
         ]);
 

@@ -1,0 +1,39 @@
+header, footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #c57f0e;
+    color: #FFFFFF;
+    flex-wrap: wrap;
+}
+
+header .title h1 {
+    margin: 0;
+    font-size: 1.8em;
+}
+
+header nav, footer .footer-anchor {
+    display: flex;
+    gap: 15px;
+}
+
+header nav .btn {
+    text-decoration: none;
+    padding: 10px 15px;
+    background-color:#5a320c;
+    color: #FFFFFF;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+header nav .btn:hover {
+    background-color: #F39C12;
+    color: #FFFFFF;
+}
+
+
+
+
+
