@@ -1,0 +1,33 @@
+.text {
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 10px;
+}
+
+p {
+    text-align: center;
+    font-size: 1rem;
+    font-family: arial;
+    font-weight: bold;
+}
+
+.mainContent {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    margin: 50px 0;
+}
+
+.option img {
+    width: 500px;
+    height: 300px;
+    border-radius: 7px;
+    box-shadow: 8px 6px 6px #000000c2;
+    transition: transform 0.3s, box-shadow 0.3s;
+    margin-bottom: 13px;
+}
+
+.option img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 12px #00000090;
+}

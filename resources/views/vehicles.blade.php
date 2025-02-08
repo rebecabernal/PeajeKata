@@ -3,6 +3,7 @@
 @section('content')
     <div class="title">
         <h2>Vehicles </h2> 
+        <a href="{{ '/' }}" class="home-btn">Home</a>
     </div>
     <div class="content">
         @foreach($vehicles as $vehicle)

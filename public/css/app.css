@@ -1,5 +1,6 @@
 @import url(header.css);
 @import url(footer.css);
+@import url(home.css);
 
 body {
     font-family: Arial, sans-serif;
@@ -68,3 +69,21 @@ h2 {
         width: 90%;
     }
 }
+
+.home-btn {
+    text-decoration: none;
+    padding: 10px 25px;
+    background-color: #5a320c;
+    color: #FFFFFF;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    margin-left: 2rem;
+}
+
+.home-btn:hover {
+    background-color: #F39C12;
+    color: #FFFFFF;
+}
+
+

@@ -3,7 +3,7 @@ header, footer {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    background-color: #1ABC9C;
+    background-color: #c57f0e;
     color: #FFFFFF;
     flex-wrap: wrap;
 }
@@ -21,7 +21,7 @@ header nav, footer .footer-anchor {
 header nav .btn {
     text-decoration: none;
     padding: 10px 15px;
-    background-color: #0c5a4a;
+    background-color:#5a320c;
     color: #FFFFFF;
     font-weight: bold;
     border-radius: 5px;
@@ -32,3 +32,8 @@ header nav .btn:hover {
     background-color: #F39C12;
     color: #FFFFFF;
 }
+
+
+
+
+
