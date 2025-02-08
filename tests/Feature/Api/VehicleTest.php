@@ -67,30 +67,30 @@ class VehicleTest extends TestCase
 } */
     public function test_if_pass_toll_method_works(): void
     {
-        // Aseguramos que un tipo de vehículo sea creado
+
         $vehicleType = VehicleType::create([
             "type" => "car",
             "price" => 100
         ]);
 
-        // Creamos el peaje
+
         Toll::create([
             "name" => "test",
             "city" => "test",
             "income" => 0
         ]);
 
-        // Usamos el id del VehicleType previamente creado
+
         $vehicle = Vehicle::create([
-            "type_id" => $vehicleType->id, // Aquí usamos el id del VehicleType
+            "type_id" => $vehicleType->id, 
             "plate" => "test",
             "total_pay" => 0
         ]);
 
-        // Realizamos la petición PUT
+
         $response = $this->put(route('apipasstoll', ['id' => $vehicle->id, 'tollId' => $vehicleType->id]));
 
-        // Verificamos la respuesta
+
         $response->assertStatus(200)
                 ->assertJsonFragment([
                     "name" => "test",
