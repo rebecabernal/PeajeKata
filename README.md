@@ -75,10 +75,6 @@ If you want to launch the tests and view them you can put this command in consol
 `php artisan test --coverage` 
 
 
-## 🛠️ Jira Backlog 
-
-![image](https://github.com/user-attachments/assets/027cc651-7ac3-43e3-aaa3-238b297e7532)
-
 ## 🗂️ BBDD Schema
 
 ![image](https://github.com/user-attachments/assets/9379ef24-19d9-484d-b8ab-e9a683b8ec59)
