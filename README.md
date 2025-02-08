@@ -1,67 +1,84 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Kata Tolls and Vehicles
+In this project it is required to develop a program that models a toll system. In which data on both tolls and vehicles are stored, as well as the relationships between them.Designed with [Laravel](https://laravel.com) framework. 
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## 👀 Views
+![Captura de pantalla 2025-02-08 120409](https://github.com/user-attachments/assets/42dc5a66-b998-4047-8606-49eed0cdfd4d)
+*Tolls View*
 
-## About Laravel
+![Captura de pantalla 2025-02-08 120346](https://github.com/user-attachments/assets/7b451383-ca98-417c-a902-89a87f589734)
+*Vehicles View*
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## 💻 Languages ​​and tools  
+![](https://skillicons.dev/icons?i=html,css,php,laravel,git,github,vscode,)
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## ⚙️ Installation prerequisites
+🟢Install [Node.js](https://nodejs.org/en/download/source-code)
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+🟢Install [Composer](https://getcomposer.org/download/)
 
-## Learning Laravel
+## 🛠️ Installation Guide 
+0️⃣ Before starting to install the project, you will need to create a database (we have used mysql via xampp) and name it: `toll` 
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+1️⃣ Open a terminal in the folder where you want the repository to be cloned and enter this command:
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+`https://github.com/rebecabernal/PeajeKata.git`
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+2️⃣ As you clone the repository, it will appear all the elements on it; you need to rename the file ".env.example" to ".env" and fill it with theese values:
 
-## Laravel Sponsors
+![image](https://github.com/user-attachments/assets/fcf2231b-cd02-42de-9922-c45e4485aa2a)
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+2️⃣ In your preferred environment, open the project you cloned; you will need three consoles for the next step.
 
-### Premium Partners
+▷Console 1:
+    `npm install` `npm run build`
+    
+▷Console 2:
+    `composer install` `composer run dev`
+    
+▷Console 3: 
+    `php artisan migrat:fresh`
+    `php artisan migrat:fresh --seed`
+    
+3️⃣ In the second console that you have opened, press the ctrl key and click on the link to localhost that it offers you. It should take you to the main view of the project where the offers are located.
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+⚠️ If you have done the previous steps and the view has not opened correctly, go back to the third command console and enter this:
 
-## Contributing
+`php artisan key:generate` `php artisan config:cache` 
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+## 🌐 Endpoints 
+For this project, there are 2 endpoints for adding vehicles and tolls. And another one to make a vehicle pass through the toll. For the 2 first you'll need to introduce via postman this json schema to enter the data.
 
-## Code of Conduct
+### 🏍️ Create Vehicle (POST)
+`http://127.0.0.1:8000/api/vehicles`
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+![Captura de pantalla 2025-02-08 122218](https://github.com/user-attachments/assets/f63462c4-6cc2-4204-af69-60e56a678c42)
 
-## Security Vulnerabilities
+### 🛣️ Create Toll (POST)
+`http://127.0.0.1:8000/api/toll`
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+![image](https://github.com/user-attachments/assets/6d42546e-752c-4383-95eb-29a55292ca9d)
 
-## License
+### 🚚 Pass Through Toll 🛣️ (PUT)
+`http://127.0.0.1:8000/api/vehicles/id/tolls/id`
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
-# PeajeKata
+## 🧪 Tests 
+All tests passed. Introduce this line on your console to check it:
+
+`./vendor/bin/phpunit tests`
+
+If you want to launch the tests and view them you can put this command in console 3:
+
+`php artisan test --coverage` 
+
+
+## 🛠️ Jira Backlog 
+
+![image](https://github.com/user-attachments/assets/027cc651-7ac3-43e3-aaa3-238b297e7532)
+
+## 🗂️ BBDD Schema
+
+![image](https://github.com/user-attachments/assets/b55d72bf-d829-4454-8837-61a05480c109)
+
+## 👩‍💻  My contact
+
+📧rebecabernalmesa@gmail.com
