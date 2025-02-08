@@ -3,7 +3,7 @@
         <h1>Tolls and Vehicles</h1>
     </div>
     <nav>
-        <a href="{{ route('tolls') }}" class="btn">View Tolls</a>
-        <a href="{{ route('vehicles') }}" class="btn">View Vehicles</a>
+        <a href="{{ route('tolls') }}" class="btn">Tolls</a>
+        <a href="{{ route('vehicles') }}" class="btn">Vehicles</a>
     </nav>
 </header>
