@@ -81,7 +81,8 @@ If you want to launch the tests and view them you can put this command in consol
 
 ## 🗂️ BBDD Schema
 
-![image](https://github.com/user-attachments/assets/b55d72bf-d829-4454-8837-61a05480c109)
+![image](https://github.com/user-attachments/assets/9379ef24-19d9-484d-b8ab-e9a683b8ec59)
+
 
 ## 👩‍💻  My contact
 
